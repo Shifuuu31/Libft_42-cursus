@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaadane <asaadane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root13 <root13@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 14:01:40 by asaadane          #+#    #+#             */
-/*   Updated: 2022/11/24 00:29:56 by asaadane         ###   ########.fr       */
+/*   Updated: 2023/10/15 20:12:44 by root13           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "header/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

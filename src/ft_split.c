@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaadane <asaadane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root13 <root13@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 14:02:27 by asaadane          #+#    #+#             */
-/*   Updated: 2022/11/24 02:14:06 by asaadane         ###   ########.fr       */
+/*   Updated: 2023/10/14 13:01:48 by root13           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ char	**ft_split(const char *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s)
+	if (!*s)
 		return (NULL);
-		wc = word_counter((char *)s, c);
-		split = (char **)malloc((wc + 1) * sizeof(char *));
+	wc = word_counter((char *)s, c);
+	split = (char **)malloc((wc + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	while (j < wc && s[i])
@@ -77,8 +77,8 @@ char	**ft_split(const char *s, char c)
 			split[j] = ft_substr((char *)s, i, word_len((char *)s, c, i));
 		if (!split[j])
 			return (ft_free(j, split));
-			j++;
-			i = i + word_len((char *)s, c, i);
+		j++;
+		i = i + word_len((char *)s, c, i);
 	}
 		split[j] = NULL;
 	return (split);
