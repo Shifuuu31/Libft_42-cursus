@@ -13,7 +13,7 @@ A custom C standard library implementation re-engineering essential libc utiliti
 
 <p align="center">
   <a href="#validation-evidence">
-    <img src="assets/validation/libft-100%.png" alt="Libft 100% 42 Evaluation Result" width="800">
+    <img src="assets/validation/libft-100.png" alt="Libft 100% 42 Evaluation Result" width="800">
   </a>
 </p>
 
@@ -26,7 +26,7 @@ A custom C standard library implementation re-engineering essential libc utiliti
 | **School** | 1337 Coding School (Khouribga) — 42 Network |
 | **Target Output** | `libft.a` (Static Library Archive) |
 | **Build System** | GNU Make (`cc`, `ar`) |
-| **Evaluation Score** | [100% (42 Peer Defense)](assets/validation/libft-100%.png) |
+| **Evaluation Score** | [100% (42 Peer Defense)](assets/validation/libft-100.png) |
 | **Functions Implemented** | 34 (23 Part 1 Libc + 11 Part 2 Additional) |
 | **Bonus Part (Linked Lists)** | Not implemented in this repository (0 / 9 functions) |
 | **Documentation Hub** | [`docs/README.md`](docs/README.md) |
@@ -135,7 +135,7 @@ Libft_42-cursus/
 │       ├── build-validation.png      # Build & static archive creation evidence
 │       ├── documentation-validation.png # Doc graph validator test run
 │       ├── git-integrity.png         # Repository and whitespace validation
-│       ├── libft-100%.png            # Official 42 school 100/100 score capture
+│       ├── libft-100.png             # Official 42 school 100/100 score capture
 │       └── sanitizer-validation.png  # AddressSanitizer 0-leak / 0-error test run
 ├── header/
 │   └── libft.h                       # Primary header with prototypes and system includes
@@ -374,7 +374,7 @@ The following captures provide verifiable evidence of the authentic 42 evaluatio
 ### 1. 42 Evaluation Result (100 / 100)
 Authentic 42 intranet evaluation score demonstrating 100% project completion on the mandatory part during peer defense.
 
-![42 Evaluation Result](assets/validation/libft-100%.png)
+![42 Evaluation Result](assets/validation/libft-100.png)
 
 ### 2. Build & Static Archive Validation
 Demonstrates that `make fclean` followed by `make CFLAGS="-Wall -Wextra -Werror -Iheader -I."` compiles all 34 translation units cleanly without warnings and packages the static archive `libft.a`.
