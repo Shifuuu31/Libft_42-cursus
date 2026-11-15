@@ -7,8 +7,14 @@ A custom C standard library implementation re-engineering essential libc utiliti
   <img src="https://img.shields.io/badge/School-1337%20(Khouribga)-black.svg" alt="1337 Khouribga">
   <img src="https://img.shields.io/badge/Network-42-black.svg" alt="42 Network">
   <img src="https://img.shields.io/badge/Project-Libft-informational.svg" alt="Libft Project">
+  <img src="https://img.shields.io/badge/Score-100%2F100-success.svg" alt="Score: 100/100">
   <img src="https://img.shields.io/badge/Functions-34%20Implemented-success.svg" alt="Functions: 34 Implemented">
-  <img src="https://img.shields.io/badge/Tests-Previously%20Tested-yellow.svg" alt="Tests: Previously Tested">
+</p>
+
+<p align="center">
+  <a href="#validation-evidence">
+    <img src="assets/validation/libft-100%.png" alt="Libft 100% 42 Evaluation Result" width="800">
+  </a>
 </p>
 
 ## Project Information
@@ -20,6 +26,7 @@ A custom C standard library implementation re-engineering essential libc utiliti
 | **School** | 1337 Coding School (Khouribga) — 42 Network |
 | **Target Output** | `libft.a` (Static Library Archive) |
 | **Build System** | GNU Make (`cc`, `ar`) |
+| **Evaluation Score** | [100% (42 Peer Defense)](assets/validation/libft-100%.png) |
 | **Functions Implemented** | 34 (23 Part 1 Libc + 11 Part 2 Additional) |
 | **Bonus Part (Linked Lists)** | Not implemented in this repository (0 / 9 functions) |
 | **Documentation Hub** | [`docs/README.md`](docs/README.md) |
@@ -47,6 +54,7 @@ Jump directly to essential sections:
 - [Working C Example](#12-complete-working-c-example)
 - [Function Categories](#4-features-implemented-categories)
 - [Testing Instructions](#14-testing-instructions)
+- [Validation Evidence](#validation-evidence)
 - [Known Limitations](#15-known-limitations-technical-observations)
 - [Author](#author)
 - [License & Academic Context](#license-academic-context)
@@ -122,6 +130,13 @@ Libft_42-cursus/
 ├── Makefile                          # Build configuration script
 ├── README.md                         # Main repository documentation
 ├── en.subject.pdf                    # Official 42 curriculum specification
+├── assets/
+│   └── validation/                   # Authentic evaluation capture & test evidence
+│       ├── build-validation.png      # Build & static archive creation evidence
+│       ├── documentation-validation.png # Doc graph validator test run
+│       ├── git-integrity.png         # Repository and whitespace validation
+│       ├── libft-100%.png            # Official 42 school 100/100 score capture
+│       └── sanitizer-validation.png  # AddressSanitizer 0-leak / 0-error test run
 ├── header/
 │   └── libft.h                       # Primary header with prototypes and system includes
 ├── src/                              # Source code (34 .c implementations)
@@ -349,6 +364,39 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./test_runn
 ```
 
 For complete testing patterns, refer to [docs/TESTING.md](docs/TESTING.md).
+
+---
+
+## Validation Evidence
+
+The following captures provide verifiable evidence of the authentic 42 evaluation grade, clean build process, AddressSanitizer testing, documentation validation, and repository integrity.
+
+### 1. 42 Evaluation Result (100 / 100)
+Authentic 42 intranet evaluation score demonstrating 100% project completion on the mandatory part during peer defense.
+
+![42 Evaluation Result](assets/validation/libft-100%.png)
+
+### 2. Build & Static Archive Validation
+Demonstrates that `make fclean` followed by `make CFLAGS="-Wall -Wextra -Werror -Iheader -I."` compiles all 34 translation units cleanly without warnings and packages the static archive `libft.a`.
+
+![Build Validation](assets/validation/build-validation.png)
+
+### 3. Full-Library AddressSanitizer Validation
+Demonstrates a full library rebuild with `-fsanitize=address -g` and execution of an instrumented validation suite covering memory manipulation, overlapping copies (`ft_memmove`), heap allocation, string formatting, and integer conversion with 0 leaks and 0 errors.
+
+![AddressSanitizer Validation](assets/validation/sanitizer-validation.png)
+
+### 4. Documentation Graph Validation
+Demonstrates execution of the automated verification suite (`python3 tests/validate_docs.py`), confirming that all internal links, heading anchor slugs, header declarations, and function index entries are 100% valid.
+
+![Documentation Validation](assets/validation/documentation-validation.png)
+
+### 5. Git Repository Integrity
+Demonstrates clean repository status, lack of trailing whitespace errors (`git diff --check`), and accurate tracking of presentation files.
+
+![Git Integrity](assets/validation/git-integrity.png)
+
+> **Scope & Context**: These captures demonstrate actual checks executed in the local development environment alongside the authentic 42 peer-evaluation defense score. They do not represent automated remote CI workflows, official 42 Moulinette evaluations, or Norminette compliance.
 
 ---
 

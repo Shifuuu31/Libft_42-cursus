@@ -32,6 +32,7 @@ Find relevant documentation by developer task:
 | Write and run a test runner with edge cases | Testing & QA Guide | [Writing a Test Runner](TESTING.md#3-writing-a-custom-test-runner) |
 | Check known technical limitations | Implementation Audit | [Known Limitations](../README.md#15-known-limitations-technical-observations) |
 | Review the official 42 assignment subject | Curriculum PDF | [en.subject.pdf](../en.subject.pdf) |
+| View validation evidence and test captures | Validation Evidence | [Validation Evidence](../README.md#validation-evidence) |
 | Apply these documentation conventions elsewhere | Documentation Standard | [Documentation Standard](PROJECT_DOCUMENTATION_STANDARD.md) |
 
 ---
