@@ -2,21 +2,34 @@
 
 A custom C standard library implementation re-engineering essential libc utilities, memory manipulation routines, string handling algorithms, and Unix file descriptor I/O.
 
-| Metric | Status |
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C-blue.svg" alt="Language: C">
+  <img src="https://img.shields.io/badge/School-1337%20(Khouribga)-black.svg" alt="1337 Khouribga">
+  <img src="https://img.shields.io/badge/Network-42-black.svg" alt="42 Network">
+  <img src="https://img.shields.io/badge/Project-Libft-informational.svg" alt="Libft Project">
+  <img src="https://img.shields.io/badge/Functions-34%20Implemented-success.svg" alt="Functions: 34 Implemented">
+  <img src="https://img.shields.io/badge/Tests-Previously%20Tested-yellow.svg" alt="Tests: Previously Tested">
+</p>
+
+## Project Information
+
+| Item | Details |
 |---|---|
-| **Curriculum Scope** | 42 Cursus Mandatory Part (34 functions) |
-| **Part 1 (Libc)** | **Complete** (23 / 23 functions) |
-| **Part 2 (Additional)** | **Complete** (11 / 11 functions) |
-| **Bonus Part (Lists)** | **Not Implemented** (0 / 9 functions) |
-| **Build Status** | **Verified** (`cc -Wall -Wextra -Werror -Iheader -I.`, `ar -r`) |
-| **Memory Safety** | **Verified** (0 leaks via AddressSanitizer) |
-| **Norminette** | **Unverified** (tool not installed in environment) |
+| **Language** | C (C99-compatible standard syntax) |
+| **Compiler & Flags** | `cc` with `-Wall -Wextra -Werror` |
+| **School** | 1337 Coding School (Khouribga) — 42 Network |
+| **Target Output** | `libft.a` (Static Library Archive) |
+| **Build System** | GNU Make (`cc`, `ar`) |
+| **Functions Implemented** | 34 (23 Part 1 Libc + 11 Part 2 Additional) |
+| **Bonus Part (Linked Lists)** | Not implemented in this repository (0 / 9 functions) |
+| **Documentation Hub** | [`docs/README.md`](docs/README.md) |
+| **Author** | Ayman Saadane ([@Shifuuu31](https://github.com/Shifuuu31)) |
 
 ---
 
 ## Documentation
 
-Navigate the connected documentation suite:
+Explore the comprehensive documentation suite:
 
 - **[Documentation Home (docs/README.md)](docs/README.md)**: Central knowledge base, learning paths, and quick navigation.
 - **[Function Reference (docs/FUNCTIONS.md)](docs/FUNCTIONS.md)**: Searchable technical reference for all 34 functions.
@@ -35,6 +48,8 @@ Jump directly to essential sections:
 - [Function Categories](#4-features-implemented-categories)
 - [Testing Instructions](#14-testing-instructions)
 - [Known Limitations](#15-known-limitations-technical-observations)
+- [Author](#author)
+- [License & Academic Context](#license-academic-context)
 
 ---
 
@@ -144,7 +159,10 @@ Libft_42-cursus/
 │   ├── ft_substr.c
 │   ├── ft_tolower.c
 │   └── ft_toupper.c
+├── tests/
+│   └── validate_docs.py              # Automated documentation graph validator
 └── docs/
+    ├── README.md                     # Central documentation hub & learning paths
     ├── FUNCTIONS.md                  # Comprehensive function reference
     ├── IMPLEMENTATION.md             # Low-level systems and memory concepts
     ├── TESTING.md                    # Test setup, edge-case matrix, and quality guide
@@ -167,7 +185,7 @@ Libft_42-cursus/
 Clone this repository to your local workstation:
 
 ```bash
-git clone https://github.com/AymanSDN/Libft_42-cursus.git
+git clone https://github.com/Shifuuu31/Libft_42-cursus.git
 cd Libft_42-cursus
 ```
 
@@ -301,16 +319,19 @@ Computed value: 42
 
 ## 13. Documentation Links
 
-- **[Detailed Function Reference](docs/FUNCTIONS.md)**: Exhaustive documentation for all 34 functions, including parameters, return values, ownership rules, and edge cases.
-- **[Implementation & Architecture Concepts](docs/IMPLEMENTATION.md)**: Deep dive into pointer arithmetic, memory overlap resolution, 2D array allocation recovery, integer conversion, and system calls.
-- **[Testing & Quality Assurance Guide](docs/TESTING.md)**: Step-by-step instructions on writing test runners, Valgrind leak checking, AddressSanitizer, and edge-case test matrices.
-- **[Project Documentation Standard](docs/PROJECT_DOCUMENTATION_STANDARD.md)**: A reusable documentation framework for 42, systems programming, and modern language repositories.
+- **[Documentation Home (docs/README.md)](docs/README.md)**: Central knowledge hub, navigation, and learning paths.
+- **[Detailed Function Reference (docs/FUNCTIONS.md)](docs/FUNCTIONS.md)**: Exhaustive documentation for all 34 functions, including parameters, return values, ownership rules, and edge cases.
+- **[Implementation & Architecture Concepts (docs/IMPLEMENTATION.md)](docs/IMPLEMENTATION.md)**: Deep dive into pointer arithmetic, memory overlap resolution, 2D array allocation recovery, integer conversion, and system calls.
+- **[Testing & Quality Assurance Guide (docs/TESTING.md)](docs/TESTING.md)**: Step-by-step instructions on writing test runners, Valgrind leak checking, AddressSanitizer, and edge-case test matrices.
+- **[Project Documentation Standard (docs/PROJECT_DOCUMENTATION_STANDARD.md)](docs/PROJECT_DOCUMENTATION_STANDARD.md)**: A reusable documentation framework for 42, systems programming, and modern language repositories.
 
 ---
 
 ## 14. Testing Instructions
 
-To run tests against the compiled static library:
+The original Libft implementation was historically evaluated and passed during the 42 Cursus peer defense (100% score on the mandatory part). The updated repository layout and documentation have been verified locally with AddressSanitizer (clean heap execution with zero leaks and zero buffer errors) and automated link validation (`python3 tests/validate_docs.py`). However, the latest state has not undergone a fresh run against automated community test suites (such as Francinette or Tripouille) in this environment.
+
+To compile and run tests against the library:
 
 ```bash
 # Build the library
@@ -354,8 +375,9 @@ In accordance with professional audit standards:
 | Library Compilation | **Verified** | Compiles cleanly with `-Wall -Wextra -Werror -Iheader -I.`. |
 | Static Archive (`libft.a`) | **Verified** | Valid static archive generated with `ar -r`. |
 | Example Application | **Verified** | Compiles, links with `libft.a`, and executes without error. |
+| 42 Defense Evaluation | **Historically Passed** | Evaluated and validated during 42 Cursus curriculum defense. |
 | 42 Norminette | **Unverified** | `norminette` is not installed on this host environment. |
-| External 42 Test Suites | **Unverified** | Third-party suites (`francinette`, `tripouille`) were not run. |
+| External 42 Test Suites | **Unverified** | Third-party suites (`francinette`, `tripouille`) were not re-run on this revision. |
 | Bonus Part (`t_list`) | **Not Implemented** | Only mandatory Part 1 and Part 2 (34 functions) are implemented. |
 
 ---
@@ -369,6 +391,23 @@ The table below maps the repository's implementations to the official 42 Libft s
 | **Part 1 — Libc Functions** | Character, string, and memory functions identical to man | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_strlen`, `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_strlcpy`, `ft_strlcat`, `ft_toupper`, `ft_tolower`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_memchr`, `ft_memcmp`, `ft_strnstr`, `ft_atoi`, `ft_calloc`, `ft_strdup` (23 functions) | **Complete** |
 | **Part 2 — Additional Functions** | Specialized string manipulation, number formatting, and file descriptor writers | `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_itoa`, `ft_strmapi`, `ft_striteri`, `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` (11 functions) | **Complete** |
 | **Bonus Part — Linked Lists** | `t_list` structure and list utilities | `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap` (9 functions) | **Not Implemented** |
+
+---
+
+## Author
+
+**Ayman Saadane**
+- GitHub: [@Shifuuu31](https://github.com/Shifuuu31)
+
+---
+
+## License & Academic Context
+
+This project was developed by **Ayman Saadane** as a student at **1337 Coding School (Khouribga)** within the **42 Network** curriculum.
+
+- **Intellectual Property**: The source code implementations are the academic work of the author.
+- **Academic Integrity**: 1337 and 42 Network projects are governed by strict peer-evaluation and anti-plagiarism policies. If you are a student currently working on Libft, please respect the Honor Code and use this repository as a learning reference rather than copying code.
+- **Licensing Notice**: No formal open-source license (such as MIT or Apache) has been attached to this repository. All rights are reserved by the author.
 
 ---
 
